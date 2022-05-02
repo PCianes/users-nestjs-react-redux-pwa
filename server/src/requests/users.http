@@ -1,0 +1,34 @@
+@authToken = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3YTY5NDgzLTYyNDctNDBjYi05N2MyLThjMTBiYmI2MWU0YiIsImVtYWlsIjoiYWRtaW5AdGVzdC5jb20iLCJpYXQiOjE2NTE0Mzk1NTAsImV4cCI6MTY1MTQ0MzE1MH0.r5P7D9OXe_cC0z--wibrjhPhe2sDbK0V7OJ2doeh62s
+
+### Get all users
+GET http://localhost:3000/users
+Authorization: {{authToken}}
+
+### Get user by ID
+GET http://localhost:3000/users/84f88160-fab9-4e3c-8384-11138a806971
+
+### Create a new user
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+  "email": "email999@test.com",
+  "password": "Admin1234",
+  "name": "pablo",
+  "surname": "cianes"
+}
+
+### Update user
+PATCH http://localhost:3000/users/9cbec334-462e-4e1d-8de0-bbc6937c8c60
+content-type: application/json
+
+{
+  "email": "email8756@test.com",
+  "password": "Admin1234",
+  "name": "pablo",
+  "surname": "cianes"
+}
+
+### Delete user
+DELETE http://localhost:3000/users/84f88160-fab9-4e3c-8384-11138a806971
+

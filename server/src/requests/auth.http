@@ -1,0 +1,21 @@
+### SignUp new User - Create new one
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+  "email": "admin33@test.com",
+  "password": "Admin1234"
+}
+
+### SignIn - Login and get JWT
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "Admin1234"
+}
+
+### Get current user info base on JWT
+GET http://localhost:3000/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3YTY5NDgzLTYyNDctNDBjYi05N2MyLThjMTBiYmI2MWU0YiIsImVtYWlsIjoiYWRtaW5AdGVzdC5jb20iLCJpYXQiOjE2NTE0NzE1NDQsImV4cCI6MTY1MTQ3NTE0NH0.w6iugUkgUiD24tbr5PnV7w10nXNMcW_BJc8bmEHri4o
